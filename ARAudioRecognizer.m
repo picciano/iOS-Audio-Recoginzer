@@ -27,6 +27,8 @@
 
 - (id)init
 {
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+
     return [self initWithSensitivity:AR_AUDIO_RECOGNIZER_SENSITIVITY_DEFAULT
                            frequency:AR_AUDIO_RECOGNIZER_FREQUENCY_DEFAULT];
 }
